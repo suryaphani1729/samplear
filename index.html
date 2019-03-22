@@ -30,11 +30,11 @@
    
    <a-scene embedded arjs>
                  <a-assets>
-                   <video id="penguin-sledding" autoplay loop="true" src="sample.mp4"></video>
+                   <video id="penguin-sledding" autoplay="true" loop="false" src="sample.mp4" webkit-playsinline></video>
                  </a-assets>
 
                  <!-- Using the asset management system. -->
-                 <a-video src="#penguin-sledding" ></a-video>
+                 <a-video  position="0 0.2 0" src="#penguin-sledding" rotation="90 180 0"></a-video>
 
                  <!-- Defining the URL inline. Not recommended but more comfortable for web developers.
                  <a-video src="airbending.mp4"></a-video> -->
