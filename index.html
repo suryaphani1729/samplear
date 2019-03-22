@@ -34,7 +34,7 @@
                  </a-assets>
 
                  <!-- Using the asset management system. -->
-                 <a-video  position="0 0.2 0" src="#penguin-sledding" rotation="90 180 0"></a-video>
+                 <a-video  position="0 0.2 0" src="#penguin-sledding" rotation="90 180 0" vidhandler></a-video>
 
                  <!-- Defining the URL inline. Not recommended but more comfortable for web developers.
                  <a-video src="airbending.mp4"></a-video> -->
@@ -44,3 +44,25 @@
    
    
 </body>
+<script>
+   
+   AFRAME.registerComponent('vidhandler', {
+  init: function () {
+    this.toggle = false;
+    document.querySelector("#vid").pause(); //reference to the video
+  },
+  tick:function(){  
+   if(document.querySelector("a-marker").object3D.visible == true){
+     if(!this.toggle){
+       this.toggle = true;
+       document.querySelector("#vid").play();
+     }
+   }else{
+     this.toggle = false;
+     document.querySelector("#vid").pause();
+   }
+  }
+});
+   
+   
+   </script>
