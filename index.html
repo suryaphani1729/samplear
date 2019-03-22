@@ -26,15 +26,11 @@
     <a-entity gltf-model="#man"></a-entity>
 
     <a-marker-camera preset='hiro'></a-marker-camera>
-  </a-scene> -->
+  </a-scene> 
    
    <a-scene embedded arjs>
       
-      
-<a-entity scale=".2 .2 .2">
-
-   <a-entity gltf-model="./cesium_man.gltf"></a-entity>
-</a-entity>
+  -->
       
       
 <!--                  <a-assets>
@@ -46,10 +42,19 @@
                  <a-video  position="0 0.2 0" src="#penguin-sledding" rotation="90 180 0" vidhandler></a-video> -->
      
                  <!-- Defining the URL inline. Not recommended but more comfortable for web developers.
-                 <a-video src="airbending.mp4"></a-video> -->
+                 <a-video src="airbending.mp4"></a-video>
       
                <a-marker-camera preset='hiro'></a-marker-camera>
 </a-scene>
+    -->
+   
+ <a-scene>  
+<a-entity scale=".2 .2 .2">
+
+   <a-entity gltf-model="./export.gltf" scale="-1 1 1"></a-entity>
+</a-entity>
+   </a-scene>
+   
    
    
 </body>
